@@ -1,140 +1,98 @@
-# QuitSmoke: Your Personalized Journey to a Smoke-Free Life
+<div align="center">
 
-## Project Overview
+# 🚭 QuitSmoke
 
-**QuitSmoke** is a comprehensive, gamified web application designed to support individuals in their journey to quit smoking. It combines behavioral science principles with engaging interactive tools and tracking features to help users manage cravings, monitor progress, and build a healthier, smoke-free life.
+**A gamified web app that helps people quit smoking, one craving at a time**
 
-The application is built as a modern Single Page Application (SPA) using a robust and scalable technology stack.
+![React](https://img.shields.io/badge/React-18-61DAFB?style=flat-square&logo=react&logoColor=black)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)
+![shadcn/ui](https://img.shields.io/badge/shadcn%2Fui-000000?style=flat-square&logo=shadcnui&logoColor=white)
+![License: MIT](https://img.shields.io/badge/License-MIT-green?style=flat-square)
 
-## Table of Contents
+</div>
 
-1.  [Features](#features)
-2.  [Technology Stack](#technology-stack)
-3.  [Installation and Setup](#installation-and-setup)
-    *   [Prerequisites](#prerequisites)
-    *   [Cloning the Repository](#cloning-the-repository)
-    *   [Installing Dependencies](#installing-dependencies)
-    *   [Running the Application](#running-the-application)
-    *   [Building for Production](#building-for-production)
-4.  [Project Structure](#project-structure)
-5.  [License](#license)
+---
+
+## Overview
+
+QuitSmoke combines behavior-change techniques with quick, interactive tools so that a user always has something to do when a craving hits: track progress, calm down, or play a short distraction game. Everything runs in the browser as a single-page application.
+
+Graduation project, **Software Engineering Department, Near East University** (41-page report and presentation included below).
 
 ## Features
 
-QuitSmoke offers a variety of tools categorized to address different aspects of the quitting process:
+**📊 Progress & motivation**
+- Smoke-free day counter, money saved and health improvement estimate
+- Habit, mood, sleep and water trackers
+- Stress meter and craving predictor to spot high-risk moments
 
-### 📊 Progress Tracking & Motivation
-*   **Quit Journey Statistics:** Tracks days smoke-free, estimated money saved, and health improvement percentage.
-*   **Habits Tracker:** Allows users to monitor and log new, healthy habits.
-*   **Mood Tracker:** Helps users identify emotional triggers and patterns.
-*   **Sleep Tracker:** Monitors sleep quality, a crucial factor in managing stress and cravings.
-*   **Stress Meter & Craving Predictor:** Tools to help users understand and anticipate high-risk moments.
+**🧠 Coping tools**
+- Guided breathing exercise
+- Calming sounds and a custom soundscape mixer
+- Quick journal for cravings and feelings
+- Virtual coach with motivational messages
+- Quit-plan generator and trigger identifier
 
-### 🧠 Behavioral & Coping Tools
-*   **Breathing Exercise:** Guided exercises for immediate stress and craving relief.
-*   **Calming Sounds & Soundscape:** Customizable ambient soundscapes for relaxation.
-*   **Quick Journal:** A simple tool for logging thoughts and feelings during cravings.
-*   **Virtual Coach:** Provides motivational messages and personalized advice.
-*   **Quit Plan Generator & Trigger Identifier:** Helps users formalize their quitting strategy and recognize personal triggers.
+**🎮 Distraction games**
+- Cigarette tap game, memory game, puzzle game, reaction game
+- Virtual stress ball
 
-### 🎮 Gamification & Distraction
-*   **Cigarette Tap Game:** A simple, engaging game to distract from immediate cravings.
-*   **Memory Game, Puzzle Game, Reaction Game:** Quick, focused games to divert attention.
-*   **Stress Ball:** A virtual interactive tool for managing physical tension.
+## Tech stack
 
-## Technology Stack
+| Layer | Technology |
+|---|---|
+| UI | React 18, TypeScript |
+| Build | Vite (SWC) |
+| Styling | Tailwind CSS, shadcn/ui (Radix UI primitives) |
+| Routing / data | React Router, TanStack Query |
+| Charts & forms | Recharts, React Hook Form + Zod |
+| Package manager | pnpm |
 
-The project is built using the following core technologies:
+## Getting started
 
-| Category | Technology | Description |
-| :--- | :--- | :--- |
-| **Frontend Framework** | React | A declarative, component-based JavaScript library for building user interfaces. |
-| **Language** | TypeScript | A strongly typed superset of JavaScript that enhances code quality and maintainability. |
-| **Build Tool** | Vite | A fast, modern build tool that provides an instant development server. |
-| **Styling** | Tailwind CSS | A utility-first CSS framework for rapidly building custom designs. |
-| **Component Library** | Radix UI / Shadcn/ui | Headless component primitives for high-quality, accessible UI components. |
-| **State Management** | React Query (TanStack) | Used for data fetching, caching, and synchronization. |
-| **Routing** | React Router DOM | Declarative routing for the Single Page Application. |
-| **Package Manager** | pnpm | Fast, disk space efficient package manager. |
-
-## Installation and Setup
-
-Follow these steps to get a local copy of the project up and running on your machine.
-
-### Prerequisites
-
-You will need the following software installed on your system:
-
-*   **Node.js** (version 18 or higher)
-*   **pnpm** (Package Manager)
-
-You can install `pnpm` globally using npm:
-```bash
-npm install -g pnpm
-```
-
-### Cloning the Repository
-
-First, clone the repository to your local machine:
+Requirements: **Node.js 18+** and **pnpm** (`npm install -g pnpm`).
 
 ```bash
-git clone <YOUR_GITHUB_REPOSITORY_URL>
-cd quit-smoking-app
-```
-*(Note: Replace `<YOUR_GITHUB_REPOSITORY_URL>` with the actual URL once you create the repository on GitHub.)*
-
-### Installing Dependencies
-
-Use `pnpm` to install all necessary project dependencies:
-
-```bash
+git clone https://github.com/gintoki123/QuitSmoke-App.git
+cd QuitSmoke-App
 pnpm install
+pnpm dev          # http://localhost:8080
 ```
 
-### Running the Application
-
-To start the development server and view the application in your browser:
+Production build:
 
 ```bash
-pnpm run dev
+pnpm build        # output in dist/
+pnpm preview
 ```
 
-The application will typically be available at `http://localhost:5173` (or a similar port displayed in your terminal).
+The included `vercel.json` makes the app ready for one-click deployment on Vercel.
 
-### Building for Production
-
-To create an optimized, production-ready build of the application:
-
-```bash
-pnpm run build
-```
-
-The compiled files will be placed in the `dist/` directory. You can then serve these files using any static file server.
-
-## Project Structure
-
-The main application logic resides in the `src/` directory:
+## Project structure
 
 ```
-quit-smoking-app/
-├── public/               # Static assets (favicon, images)
-├── src/
-│   ├── components/       # Reusable UI components (e.g., Button, Card)
-│   │   └── ui/           # Shadcn/ui components
-│   ├── hooks/            # Custom React hooks
-│   ├── lib/              # Utility functions (e.g., utils.ts)
-│   ├── pages/            # Main application views (e.g., Index.tsx, MoodTracker.tsx)
-│   ├── App.tsx           # Main application component
-│   ├── globals.css       # Global styles and Tailwind directives
-│   └── main.tsx          # Entry point for the React application
-├── index.html            # Main HTML file
-├── package.json          # Project metadata and dependencies
-├── tailwind.config.ts    # Tailwind CSS configuration
-└── vite.config.ts        # Vite build tool configuration
+src/
+├── pages/            # Routes: Index, MoodTracker, Soundscape, NotFound
+├── components/       # Feature components (trackers, games, coping tools)
+│   └── ui/           # shadcn/ui building blocks
+├── hooks/            # Custom React hooks
+├── lib/ · utils/     # Helpers
+├── App.tsx           # Router setup
+└── main.tsx          # Entry point
 ```
+
+## Documentation
+
+- 📄 [Graduation project report (41 pages, PDF)](QuitSmoke%20Graduation%20Project%20Report%20-%2041%20Pages.pdf)
+- 📊 [Presentation slides (PPTX)](Quit-Smoking-Support-Application.pptx)
+- 🎬 [Demo video (MKV)](QuitSmoking%20Project.mkv)
 
 ## License
 
-This project is licensed under the MIT License. See the LICENSE file for details.
-*(Note: You will need to create a separate `LICENSE` file for your repository.)*
+Released under the [MIT License](LICENSE).
 
+## Author
+
+**Bilal Boulaalam** · [GitHub](https://github.com/gintoki123)
